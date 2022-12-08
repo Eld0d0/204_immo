@@ -1,6 +1,9 @@
 /* Généralités */
 #corps_page{
-    margin: 1em 15vw 1em 15vw;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 /* Fin des généralités */
 
@@ -10,11 +13,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
 }
 .logement{
-    height: 10%;
-    max-width: 20vw;
+    width: 30%;
     margin-top: 3em;
     background-color: white;
     background-color: white;
@@ -22,19 +23,19 @@
     align-items: center;
     flex-direction: column;
     border-radius: 5%;
-    border: 2px solid black;
 }
 .logement:nth-child(3n+1){   
-    margin-right: 4vw;
+    margin-right: 5%;
 }
 .logement:nth-child(3n+2){   
-    margin-right: 4vw;
+    margin-right: 5%;
 }
 .logement_img{
-    max-width: 20vw;
+    width: 100%;
     height: auto;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
+    border: 2px solid black;
 }
 
 .logement_information{
@@ -43,15 +44,18 @@
     max-height: 15vh;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
-    border-top: 2px solid black;
+    border: 2px solid black;
 }
 /* Fin partie liste des logements */
 
 
 /* Partie formulaire */
-#formulaire_filtre .filtre_form{
+#formulaire_filtre {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
+    margin-top: 3em;
+    padding-right: 5vw;
+    width: auto;
 }
 /* Fin partie formulaire */
