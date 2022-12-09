@@ -103,7 +103,7 @@
   <?php endif;
   $requete->closeCursor();
   ?>
-</body>
+</body>sdsd
 <!-- On ajoute le footer -->
 <?php include 'footer.php';?>
 </html>
