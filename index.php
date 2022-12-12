@@ -6,6 +6,14 @@
   <title>Accueil</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/normalize.css">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <!-- On ajoute le header -->
 <?php include 'header.php'; ?>
@@ -13,6 +21,7 @@
 <body>
   <section id="corps_page">
     <div id="formulaire_filtre">
+      <h2>Filtre</h2>
       <form class="filtre_form" action="index.php" method="POST">
 
 
@@ -38,10 +47,14 @@
           </div>
         </div>
 
+        <div class="bouton_container">
+          <button class="bouton_form" name="submit_post" type="submit">Filtrer</button>
+        </div>
 
-        <button name="submit_post" type="submit">Filtrer</button>
       </form>
-      <button><a href="index.php">Reset</a></button>
+      <div class="bouton_container">
+        <button id="form_reset" class="bouton_form"><a href="index.php">Reset</a></button>
+      </div>
     </div>
 
     <div id="liste_logements">
@@ -148,5 +161,6 @@
 </body>
 <!-- On ajoute le footer -->
 <?php include 'footer.php'; ?>
+<script src="js/index.js"></script>
 
 </html>

@@ -1,51 +1,80 @@
 /* Généralités */
-#corps_page{
+#corps_page {
     display: flex;
     flex-direction: row;
     padding-left: 5vw;
     padding-right: 5vw;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
+
+h1, h2, h3{
+    font-family: 'Ubuntu', sans-serif;
+    color: #F35E3E;
+    font-size: 2em;
+}
+
+p, span, strong, input, label, a, button{
+    font-family: 'Merriweather Sans', sans-serif!important;
+    font-size: 1em;
+}
+
 /* Fin des généralités */
 
 
 /* Partie liste des logements */
-#liste_logements{
+#liste_logements {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: flex-start;
+    width: 100%;
+    margin-right: 20%;
 }
-.logement{
-    width: 30%;
-    margin-top: 3em;
+
+.logement {
+    width: 100%;
+    height: 20vh;
     background-color: white;
     background-color: white;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 5%;
-}
-.logement:nth-child(3n+1){   
-    margin-right: 5%;
-}
-.logement:nth-child(3n+2){   
-    margin-right: 5%;
-}
-.logement_img{
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
-    border: 2px solid black;
+    flex-direction: row;
+    margin-bottom: 5%;
+    transform: translateX(100vw);
+    opacity: 0;
+    transition-property: transform opacity;
 }
 
-.logement_information{
-    width: 100%;
-    text-align: center;
-    max-height: 15vh;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
-    border: 2px solid black;
+.logement:nth-child(3n+1) {
+    margin-right: 5%;
 }
+
+.logement:nth-child(3n+2) {
+    margin-right: 5%;
+}
+
+.logement_img {
+    width: auto;
+    height: 100%;
+    -webkit-box-shadow: -15px 15px 0px 5px #F35E3E;
+    box-shadow: -15px 15px 0px 5px #F35E3E;
+    transition-property: box-shadow -webkit-box-shadow;
+    transition-duration: 0.5s;
+}
+
+.logement_information {
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #3B2E40;
+    margin-left: 2em;
+}
+
+/* Animations */
+.logement:hover .logement_img{
+    -webkit-box-shadow: 0px 0px 0px 0px #F35E3E;
+    box-shadow: 0px 0px 0px 0px #F35E3E;
+}
+
 /* Fin partie liste des logements */
 
 
@@ -55,7 +84,61 @@
     flex-wrap: nowrap;
     flex-direction: column;
     margin-top: 3em;
-    padding-right: 5vw;
+    margin-right: 4vw;
+    padding-right: 1vw;
     width: auto;
+    height: auto;
+    border-right: 2px solid #3B2E40;
 }
+
+#formulaire_filtre input[type=text]{
+    border-radius: 10px;
+    border: 2px solid #6173F4;
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#formulaire_filtre input[type=radio]{
+    margin-bottom: 1em;
+}
+
+/* Bouton */
+
+.bouton_container {
+    margin-top: 2em;
+    background: #6173F4;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .bouton_form {
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 12px 30px 12px 30px;
+    border-radius: 20px;
+    background: #6173F4;
+    color: white!important;
+    transform: translateY(-12px);
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+    transition-property: transform color;
+    transition-duration: 0.4s;
+  }
+  .bouton_form:hover{
+    text-decoration: none;
+    transform: translateY(-8px);
+  }
+
+  .bouton_container:active .bouton_form {
+    transform: translateY(0px);
+  }
+  .bouton_form a{
+    text-decoration: none;
+    width: 100%;
+    color: white;
+  }
 /* Fin partie formulaire */
