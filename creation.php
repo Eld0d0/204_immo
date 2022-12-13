@@ -49,6 +49,7 @@
     'type' => $_POST['type'],
     'surface' => $_POST['surface']
   ));
+  $requete->closeCursor();
 ?>
   
 </body>
