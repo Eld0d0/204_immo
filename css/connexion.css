@@ -1,3 +1,11 @@
+/* Généralités affichage de la page */
+form{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+
 .text {
     margin-left: 50px;
 }
@@ -24,7 +32,36 @@ input[type=password], select {
     box-sizing: border-box;
 }
 
+/* Bouton */
 
+.bouton_container {
+    margin-top: 2em;
+    background: #6173F4;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 10%;
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .bouton_form {
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 12px 30px 12px 30px;
+    border-radius: 20px;
+    background: #6173F4;
+    color: white!important;
+    transform: translateY(-12px);
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+    transition-property: transform color;
+    transition-duration: 0.4s;
+  }
+  .bouton_form:hover{
+    text-decoration: none;
+    transform: translateY(-8px);
+  }
+  /* Fin bouton */
 
 .col {
     border-radius: 5px;
