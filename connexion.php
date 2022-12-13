@@ -16,7 +16,7 @@
   <?php
 
   /* On lance notre requête afin de récupérer nos données de la BDD */
-  $bdd = new PDO('mysql:host=localhost:3306;dbname=agence_immobiliere;charset=utf8', 'root', '');
+  $bdd = new PDO('mysql:host=localhost:3306;dbname=agence_immobiliere;charset=utf8', 'agence_immobiliere', 'groupe01');
   $requete = $bdd->query('SELECT * FROM `clients`');
   $clients = $requete->fetchAll();
 
