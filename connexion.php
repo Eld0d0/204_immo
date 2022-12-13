@@ -85,25 +85,30 @@
         <div class="row">
           <div class="col">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Identifiant" name="login" required>
+              <p class="text"> Identifiant </p>
+              <input type="id" class="form-control" placeholder="Votre identifiant..." name="login" required>
             </div>
           </div>
           <div class="col">
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="Mot de passe" name="mdp" required>
+              <p class="text"> Mot de passe </p>
+              <input type="password" class="form-control" placeholder="Votre mot de passe..." name="mdp" required>
             </div>
           </div>
             <div class="col">
-              <button type="submit" class="btn btn-primary mb-2">Se Connecter</button>
+              <br>
+              <button type="submit" class="btn btn-primary mb-2">Se connecter</button>
             </div>
         </div>
       </form>
+
   <?php else: /* Sinon, s'il est déjà connecté ou vient de se connecter, on affiche ce message (PLACEHOLDER, CE SERA À REMPLACER) */ ?>
     <p>Bienvenue <?php echo $_SESSION['identifiant']; ?>, votre mot de passe est <?php echo $_SESSION['motdepasse'];?>.</p>
   <?php endif;
   $requete->closeCursor();
   ?>
-</body>sdsd
+
+</body>
 <!-- On ajoute le footer -->
 <?php include 'footer.php';?>
 </html>
