@@ -12,10 +12,17 @@
 
 <?php
   $bdd = new PDO ('mysql:host=localhost:3306;dbname=agence_immobiliere;charset=utf8','root','');
-  
+  function isConnecte(){
+		if($_SESSION && count($_SESSION) && array_key_exists('login', $_SESSION) && !empty($_SESSION['login'])){
+			return true;
+		}else{
+			return false;
+		}
+	}
 ?>
 
-
+<?php if(!isConnecte()) { ?>
+  
 <form method="POST">
   <div class="row">
     <div class="col">
@@ -27,7 +34,11 @@
     <div class="col">
       <div class="form-group">
         <label for="name">Type de logement : </label>
-        <input type="text" class="form-control" name="type" required>
+            <label for="name">Maison</label>
+            <input type="radio" class="form-control" name="type" value="maison" required>
+
+            <label for="name">Appartement</label>
+            <input type="radio" class="form-control" name="type" value="appartement" required>
       </div>
     </div>
     <div class="col">
@@ -42,14 +53,22 @@
   </div>
 </form>
 
+<?php } ?>
+
 <?php
+if(isset($_POST) && count($_POST)){
+  $adresse = $_POST['adresse'];
+  $type = $_POST['type'];
+  $surface = $_POST['surface'];
+
   $requete = $bdd->prepare('INSERT INTO logements (adresse, type, surface) VALUES (:adresse, :type, :surface)');
   $requete->execute(array(
-    'adresse' => $_POST['adresse'],
-    'type' => $_POST['type'],
-    'surface' => $_POST['surface']
+    'adresse' => $adresse,
+    'type' => $type,
+    'surface' => $surface
   ));
   $requete->closeCursor();
+}
 ?>
   
 </body>
