@@ -20,6 +20,54 @@
 
 <body>
 
+<?php
+  $bdd = new PDO ('mysql:host=localhost:3306;dbname=agence_immobiliere;charset=utf8','agence_immobiliere','groupe01');
+  function isConnecte(){
+		if($_SESSION && count($_SESSION) && array_key_exists('login', $_SESSION) && !empty($_SESSION['login'])){
+			return true;
+		}else{
+			return false;
+		}
+	}
+?>
+
+<?php if(!isConnecte()) { ?>
+  
+<form method="POST">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="name">Identifiant : </label>
+        <input type="text" class="form-control" name="adresse" required>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="name">Mot de passe : </label>
+        <input type="text" class="form-control" name="adresse" required>
+      </div>
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary mb-2">Ajouter</button>
+    </div>
+  </div>
+</form>
+
+<?php } ?>
+
+<?php
+if(isset($_POST) && count($_POST)){
+  $login = $_POST['identifiant'];
+  $mdp = $_POST['motdepasse'];
+
+  $requete = $bdd->prepare('INSERT INTO clients (identifiant, motdepasse) VALUES (:identifiant, :motdepasse)');
+  $requete->execute(array(
+    'identifiant' => $login,
+    'motdepasse' => $mdp
+  ));
+  $requete->closeCursor();
+}
+?>
 
 </body>
 <!-- On ajoute le footer -->
