@@ -8,8 +8,15 @@ form{
 
 .text {
     margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.erreur {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 input[type=id], select {
     width: 40%;
     padding: 12px 20px;
@@ -19,6 +26,7 @@ input[type=id], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input[type=password], select {
@@ -30,6 +38,7 @@ input[type=password], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Bouton */
@@ -55,6 +64,7 @@ input[type=password], select {
     box-shadow: #3B2E40 0 0px 0px 1px inset!important;
     transition-property: transform color;
     transition-duration: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .bouton_form:hover{
     text-decoration: none;
