@@ -38,14 +38,14 @@
   <div class="row">
     <div class="col">
       <div class="form-group">
-        <p class="text"> Identifiant</p>
-        <input type="text" class="form-control" placeholder="Votre identifiant..." name="identifiant" required>
+        <p class="text"> Choisissez votre identifiant </p>
+        <input type="text" class="form-control" placeholder="Identifiant..." name="identifiant" required>
       </div>
     </div>
     <div class="col">
       <div class="form-group">
-        <p class="text"> Mot de passe</p>
-        <input type="password" class="form-control" placeholder="Votre mot de passe..." name="motdepasse" required>
+        <p class="text"> Choisissez un mot de passe </p>
+        <input type="password" class="form-control" placeholder="Mot de passe..." name="motdepasse" required>
       </div>
     </div>
     <div class="col">
