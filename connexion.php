@@ -70,9 +70,11 @@
           </div>
         </div>
         <div class="col">
-          <br>
           <div class="bouton_container">
             <button type="submit" class="bouton_form">Se connecter</button>
+          </div>
+          <div class="bouton_container">
+            <button onclick="location.href='creation_compte.php'" class="bouton_form"> Page d'inscription </button>
           </div>
         </div>
       </div>
