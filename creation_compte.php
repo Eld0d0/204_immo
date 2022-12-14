@@ -1,10 +1,11 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <title>Création de compte</title>
-  <link rel="stylesheet" href="css/creation_compte_.css">
+  <link rel="stylesheet" href="css/creation_compte.css">
   <link rel="stylesheet" href="css/normalize.css">
 
   <!-- Google fonts -->
@@ -37,18 +38,23 @@
   <div class="row">
     <div class="col">
       <div class="form-group">
-        <label for="name">Identifiant : </label>
-        <input type="text" class="form-control" name="adresse" required>
+        <p class="text"> Identifiant</p>
+        <input type="text" class="form-control" placeholder="Votre identifiant..." name="identifiant" required>
       </div>
     </div>
     <div class="col">
       <div class="form-group">
-        <label for="name">Mot de passe : </label>
-        <input type="text" class="form-control" name="adresse" required>
+        <p class="text"> Mot de passe</p>
+        <input type="password" class="form-control" placeholder="Votre mot de passe..." name="motdepasse" required>
       </div>
     </div>
     <div class="col">
-      <button type="submit" class="btn btn-primary mb-2">Ajouter</button>
+      <div class="bouton_container">
+        <button type="submit" class="bouton_form">Créer mon compte</button>
+      </div>
+      <div class="bouton_container">
+        <button onclick="location.href='connexion.php'" class="bouton_form"> Page de connexion </button>
+      </div>
     </div>
   </div>
 </form>
