@@ -1,0 +1,79 @@
+/* Généralités affichage de la page */
+form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+
+.text {
+    margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.erreur {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type=id], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=password], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Bouton */
+
+.bouton_container {
+    margin-top: 2em;
+    background: #6173F4;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 20%;
+    margin-left: 50px;
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+  }
+  .bouton_form {
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 12px 30px 12px 30px;
+    border-radius: 20px;
+    background: #6173F4;
+    color: white!important;
+    transform: translateY(-12px);
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+    transition-property: transform color;
+    transition-duration: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .bouton_form:hover{
+    text-decoration: none;
+    transform: translateY(-8px);
+  }
+  /* Fin bouton */
+
+.col {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 12px;
+}
