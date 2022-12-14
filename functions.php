@@ -30,4 +30,15 @@
         $element = htmlspecialchars($element);
         return $element;
     }
+
+    /*
+      Fonction "connexion"
+      Elle connecte un utilisateur selon les paramètres transmis
+      et les stock dans la SESSION
+    */
+
+  function connexion($identifiant)
+  {
+    $_SESSION['identifiant'] = $identifiant;
+  }
 ?>

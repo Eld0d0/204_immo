@@ -18,17 +18,6 @@
 
   /* Fonctions qui permettent de vérifier qu'un utilisateur est connecté / se connecter / mauvais identifiants & mdp */
 
-  /*
-      Fonction "connexion"
-      Elle connecte un utilisateur selon les paramètres transmis
-      et les stock dans la SESSION
-    */
-
-  function connexion($identifiant)
-  {
-    $_SESSION['identifiant'] = $identifiant;
-  }
-
   if (
     array_key_exists('identifiant', $_POST) && array_key_exists('motdepasse', $_POST)
     && !empty($_POST['identifiant']) && !empty($_POST['motdepasse'])
