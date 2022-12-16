@@ -45,7 +45,7 @@ input[type=password], select {
     margin-left: 50px;
     box-shadow: #3B2E40 0 0px 0px 1px inset!important;
   }
-  .bouton_form {
+.bouton_form {
     border: none;
     width: 100%;
     display: block;
@@ -59,14 +59,16 @@ input[type=password], select {
     transition-duration: 0.4s;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .bouton_form:hover{
+.bouton_form:hover{
     text-decoration: none;
     transform: translateY(-8px);
   }
   /* Fin bouton */
 
-  .col {
-    border-radius: 5px;
+.row {
+    border-radius: 15px;
     background-color: #f2f2f2;
+}
+.col {
     padding: 12px;
 }

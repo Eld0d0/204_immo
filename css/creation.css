@@ -4,17 +4,45 @@
 }
 
 form {
-    background-color: #F35E3E;
+    background-color: #f2f2f2;
     padding: 0.5em;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 38%;
+    margin-right: 38%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 15px;
 }
 
 .col {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
+/* Bouton */
+.bouton_container {
+    margin-top: 1em;
+    background: #6173F4;
+    border-radius: 20px;
+    width: 20%;
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+  }
+  .bouton_form {
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 12px 30px 12px 9px;
+    border-radius: 20px;
+    background: #6173F4;
+    color: white!important;
+    transform: translateY(-12px);
+    box-shadow: #3B2E40 0 0px 0px 1px inset!important;
+    transition-property: transform color;
+    transition-duration: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .bouton_form:hover {
+    text-decoration: none;
+    transform: translateY(-8px);
+  }
+  /* Fin bouton */

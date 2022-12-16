@@ -32,15 +32,15 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <p class="text"> Choisissez votre identifiant </p>
-            <input type="text" class="form-control" placeholder="Identifiant..." name="identifiant" required>
+            <p class="text">Choisissez votre identifiant</p>
+            <input type="text" class="form-control" placeholder="Identifiant" name="identifiant" required>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <p class="text"> Choisissez un mot de passe </p>
-            <em>Doit contenir une majuscule, une minuscule, un chiffre et doit faire au minimum 8 caractères.</em>
-            <input type="password" class="form-control" placeholder="Mot de passe..." name="motdepasse" required>
+            <p class="text">Choisissez un mot de passe</p>
+            <em class="text">Doit contenir une majuscule, une minuscule, un chiffre et doit faire au minimum 8 caractères.</em>
+            <input type="password" class="form-control" placeholder="Mot de passe" name="motdepasse" required>
           </div>
         </div>
         <div class="col">

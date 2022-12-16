@@ -26,12 +26,12 @@
 
 
         <div>
-          <label for="sfc_min">Surface min en m2 :</label>
+          <label for="sfc_min">Surface min en m² :</label>
           <input type="text" id="sfc_min" name="text_sfc_min">
         </div>
 
         <div>
-          <label for="sfc_max">Surface max en m2 :</label>
+          <label for="sfc_max">Surface max en m² :</label>
           <input type="text" id="sfc_max" name="text_sfc_max">
         </div>
 
@@ -60,9 +60,9 @@
     <div id="liste_logements">
       <?php
 
-      /* Pour commencer on définit une fonction qui va nous
-    permettre de vérifier l'ensemble des données
-    recu afin de palier aux failles XSS */
+      /* Pour commencer, on définit une fonction qui va nous
+      permettre de vérifier l'ensemble des données
+      reçues afin de pallier aux failles XSS */
       function verification($element_post)
       {
         $element_post = trim($element_post);
@@ -80,8 +80,8 @@
       if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST) && count($_POST)) {
         if (array_key_exists('radio_type', $_POST) && !empty($_POST['radio_type'])) {
 
-          /* Ensuite on stock toutes les données
-    récupérés dans des variables en appliquant notre fonction de sécurité*/
+          /* Ensuite on stocke toutes les données
+          récupérées dans des variables en appliquant notre fonction de sécurité */
           $type = verification($_POST["radio_type"]);
 
           /* On trie nos données récupéré dans la BDD suivant
@@ -94,7 +94,7 @@
             }
           }
         }
-        /* Système de trie de la surface minimum */
+        /* Système de tri de la surface minimum */
         if (array_key_exists('text_sfc_min', $_POST) && !empty($_POST['text_sfc_min'])) {
           $sfc_min = verification($_POST['text_sfc_min']);
 
@@ -106,7 +106,7 @@
             }
           }
         }
-        /* Système de trie de la surface maximum */
+        /* Système de tri de la surface maximum */
         if (array_key_exists('text_sfc_max', $_POST) && !empty($_POST['text_sfc_max'])) {
           $sfc_max = verification($_POST['text_sfc_max']);
 
@@ -120,10 +120,10 @@
         }
       }
 
-      /* On trie $logements si un filtre à été appliqué */
+      /* On tri $logements si un filtre à été appliqué */
 
 
-      /* on affiche les éléments de notre Array */
+      /* On affiche les éléments de notre Array */
       $image = "";
       foreach ($logements as $element) {
         /* On affiche une image suivant le type de bien */
@@ -143,7 +143,7 @@
             <p>Type de logement : ' . $element['type'] . '</p>
           </div>
           <div>
-            <p>Surface : ' . $element['surface'] . 'm2</p>
+            <p>Surface : ' . $element['surface'] . 'm²</p>
           </div>
           <div>
             <p>Référence : ' . $element['id'] . '</p>
