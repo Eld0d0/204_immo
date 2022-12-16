@@ -8,7 +8,7 @@
     function connecte()
     {
       if (
-        $_SESSION
+        isset($_SESSION)
         && count($_SESSION)
         && array_key_exists('identifiant', $_SESSION)
         && !empty($_SESSION['identifiant'])

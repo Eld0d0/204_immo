@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="fr">
 
@@ -15,6 +16,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
+<?php include 'functions.php'; ?>
 <!-- On ajoute le header -->
 <?php include 'header.php'; ?>
 
