@@ -23,28 +23,31 @@
       <div class="row">
         <div class="col">
           <div class="form-group">
-            <label for="name">Adresse du logement : </label>
+            <label for="name">Adresse du logement :</label>
             <input type="text" class="form-control" name="adresse" required>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label for="name">Type de logement : </label>
-            <label for="name">Maison</label>
-            <input type="radio" class="form-control" name="type" value="maison" required>
+            <label for="name">Type de logement :</label>
 
-            <label for="name">Appartement</label>
             <input type="radio" class="form-control" name="type" value="appartement" required>
+            <label for="name">Appartement</label>
+            
+            <input type="radio" class="form-control" name="type" value="maison" required>
+            <label for="name">Maison</label>
           </div>
         </div>
         <div class="col">
           <div class="form-group">
-            <label for="name">Surface (en m²) : </label>
+            <label for="name">Surface (en m²) :</label>
             <input type="number" class="form-control" name="surface" required>
           </div>
         </div>
         <div class="col">
-          <button type="submit" class="btn btn-primary mb-2">Ajouter</button>
+          <div class="bouton_container">
+            <button type="submit" class="bouton_form">Ajouter</button>
+          </div>
         </div>
       </div>
     </form>
@@ -82,9 +85,9 @@
       $requete->closeCursor();
 
       /* On termine avec l'affichage d'un message pour l'utilisateur */
-      echo "Votre logement est bien entré merci à vous !";
+      echo "Votre logement a bien été ajouté à notre site.";
     } else {
-      echo "Une erreure est survenue veuillez vérifier les valeurs rentrées";
+      echo "Une erreur est survenue, veuillez vérifier les valeurs saisies.";
     }
   }
   ?>
