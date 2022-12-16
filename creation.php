@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <title>Création d'une page produit</title>
   <link rel="stylesheet" href="css/creation.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <?php include 'functions.php'; ?>
 <!-- On ajoute le header -->
