@@ -14,35 +14,6 @@
 
 <body>
 
-  <?php
-
-  /* Fonctions qui permettent de vérifier qu'un utilisateur est connecté / se connecter / mauvais identifiants & mdp */
-
-  if (
-    array_key_exists('identifiant', $_POST) && array_key_exists('motdepasse', $_POST)
-    && !empty($_POST['identifiant']) && !empty($_POST['motdepasse'])
-  ) {
-    /* On lance notre requête afin de récupérer nos données de la BDD */
-    $bdd = new PDO('mysql:host=localhost:3306;dbname=agence_immobiliere;charset=utf8', 'agence_immobiliere', 'groupe01');
-    // On prépare une requête avec des arguments en ?
-    $requete = $bdd->prepare('SELECT * FROM `clients` WHERE `identifiant` = ? AND `motdepasse` = ?');
-    // On fournit une liste d'argument pour les ? 
-    if ($requete->execute([$_POST['identifiant'], $_POST['motdepasse']])) {
-      // On récupère le resultat (variable $res) de la requête. FETCH_ASSOC met le résultat sous forme de tableau associatif
-      $res = $requete->fetch(PDO::FETCH_ASSOC);
-      // Si le resultat est vide, alors on considère que aucun utilisateur n'existe dans la base de données
-      if (empty($res)) {
-  ?>
-        <p class="erreur"> L'identifiant ou le mot de passe est incorrect. </p>
-  <?php
-      } else { /* Sinon, on se connecte, car un utilisateur a été trouvé dans la base de données */
-        connexion($_POST['identifiant']);
-      }
-    }
-  }
-
-  ?>
-
   <?php if (!connecte()) : /* Si l'utilisateur n'est pas connecté, on affiche le formulaire */ ?>
     <form method="POST">
       <div class="row">
@@ -69,9 +40,38 @@
       </div>
     </form>
 
+    <?php
+
+    /* Fonctions qui permettent de vérifier qu'un utilisateur est connecté / se connecter / mauvais identifiants & mdp */
+
+    if (
+      array_key_exists('identifiant', $_POST) && array_key_exists('motdepasse', $_POST)
+      && !empty($_POST['identifiant']) && !empty($_POST['motdepasse'])
+    ) {
+      /* On lance notre requête afin de récupérer nos données de la BDD */
+      $bdd = new PDO('mysql:host=localhost:3306;dbname=agence_immobiliere;charset=utf8', 'agence_immobiliere', 'groupe01');
+      // On prépare une requête avec des arguments en ?
+      $requete = $bdd->prepare('SELECT * FROM `clients` WHERE `identifiant` = ? AND `motdepasse` = ?');
+      // On fournit une liste d'argument pour les ? 
+      if ($requete->execute([$_POST['identifiant'], $_POST['motdepasse']])) {
+        // On récupère le resultat (variable $res) de la requête. FETCH_ASSOC met le résultat sous forme de tableau associatif
+        $res = $requete->fetch(PDO::FETCH_ASSOC);
+        // Si le resultat est vide, alors on considère que aucun utilisateur n'existe dans la base de données
+        if (empty($res)) {
+    ?>
+          <p class="erreur"> L'identifiant ou le mot de passe est incorrect. </p>
+    <?php
+        } else { /* Sinon, on se connecte, car un utilisateur a été trouvé dans la base de données */
+          connexion($_POST['identifiant']);
+        }
+      }
+    }
+
+    ?>
+
 
   <?php else : /* Sinon, s'il est déjà connecté ou vient de se connecter, on affiche ce message (L'affichage est un placeholder) */ ?>
-    <p>Bienvenue <?php echo $_SESSION['identifiant']; ?>.</p>
+    <h1 style="text-align: center;">Bienvenue <?php echo $_SESSION['identifiant']; ?>.</h1>
   <?php endif;
   ?>
 

@@ -85,9 +85,9 @@
       $requete->closeCursor();
 
       /* On termine avec l'affichage d'un message pour l'utilisateur */
-      echo "Votre logement a bien été ajouté à notre site.";
+      echo "<p style='text-align: center;'>Votre logement a bien été ajouté à notre site.</p>";
     } else {
-      echo "Une erreur est survenue, veuillez vérifier les valeurs saisies.";
+      echo "<p style='text-align: center;'>Une erreur est survenue, veuillez vérifier les valeurs saisies.<p>";
     }
   }
   ?>

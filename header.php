@@ -1,6 +1,17 @@
 <link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/general.css">
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
 <header>
     <nav>
+        <a href="index.php">
+            <img src="assets/logo.png">
+        </a>
         <a href="index.php">Accueil</a>
         <?php
         if (!connecte()) {

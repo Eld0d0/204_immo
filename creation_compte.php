@@ -93,11 +93,11 @@
           /* Et on le redirige vers la page de connexion qui lui affichera un message de bienvenu */
           header('Location: connexion.php');
         } else {
-          echo "Identifiant déjà utilisé essayez : " . $login . "01";
+          echo "<p style='text-align: center; color: red;'>Identifiant déjà utilisé essayez : " . $login . "01</p>";
         }
       }
     } else {
-      echo "Mot de passe non valide";
+      echo "<p style='text-align: center; color: red;'>Mot de passe non valide</p>";
     }
   }
   ?>

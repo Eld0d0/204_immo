@@ -8,17 +8,6 @@
     margin-bottom: 2em;
 }
 
-h1, h2, h3{
-    font-family: 'Ubuntu', sans-serif;
-    color: #F35E3E;
-    font-size: 2em;
-}
-
-p, span, strong, input, label, a, button{
-    font-family: 'Merriweather Sans', sans-serif!important;
-    font-size: 1em;
-}
-
 /* Fin des généralités */
 
 
